@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+
+        <nav aria-label="Primary navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#courses">Courses</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Learn with purpose</p>
+                <h2>Build the skills that move you forward.</h2>
+                <p>This is my first website created using HTML, CSS and JavaScript.</p>
+                <button type="button" onclick="showMessage()">Explore learning</button>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <p class="eyebrow">About us</p>
+            <h2>Practical learning for ambitious minds.</h2>
+            <p>
+                We make useful education feel approachable, combining clear guidance with
+                skills you can apply in your studies, career and everyday life.
+            </p>
+        </section>
+
+        <section id="courses" class="content-section courses-section">
+            <p class="eyebrow">Our courses</p>
+            <h2>Choose your next direction.</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <span class="card-number">01</span>
+                    <h3>B.Pharmacy</h3>
+                    <p>Learn pharmaceutical sciences and pharmacy practice.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">02</span>
+                    <h3>MBA</h3>
+                    <p>Learn management, business and leadership skills.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">03</span>
+                    <h3>Computer Skills</h3>
+                    <p>Learn basic computer and web development skills.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div>
+                <p class="eyebrow">Get in touch</p>
+                <h2>Start a conversation.</h2>
+            </div>
+            <div class="contact-details">
+                <p><strong>Email</strong><br>example@gmail.com</p>
+                <p><strong>Phone</strong><br>+91 XXXXX XXXXX</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

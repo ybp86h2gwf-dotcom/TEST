@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --ink: #17251f;
+    --muted: #617269;
+    --paper: #f5f1e9;
+    --cream: #fffdf8;
+    --green: #1f614c;
+    --lime: #c8e58b;
+    --line: #d9dfd4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 26px 32px;
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.05;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--ink);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.hero {
+    align-items: center;
+    background: var(--green);
+    color: var(--cream);
+    display: flex;
+    min-height: min(680px, 78vh);
+    overflow: hidden;
+    padding: 90px max(32px, calc((100vw - 1116px) / 2));
+    position: relative;
+}
+
+.hero::after {
+    border: 1px solid rgba(200, 229, 139, 0.3);
+    border-radius: 50%;
+    content: '';
+    height: 520px;
+    position: absolute;
+    right: -120px;
+    top: -100px;
+    width: 520px;
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow {
+    color: var(--lime);
+}
+
+.hero h2 {
+    font-size: clamp(3.25rem, 8vw, 7rem);
+    max-width: 800px;
+}
+
+.hero p:not(.eyebrow) {
+    color: #dbe8d9;
+    font-size: 1.1rem;
+    margin: 28px 0 34px;
+    max-width: 460px;
+}
+
+button {
+    background: var(--lime);
+    border: 0;
+    border-radius: 999px;
+    color: var(--ink);
+    cursor: pointer;
+    font: 700 0.9rem 'DM Sans', sans-serif;
+    padding: 15px 24px;
+}
+
+button:hover {
+    background: var(--cream);
+}
+
+.content-section,
+.contact-section {
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 120px 32px;
+}
+
+.content-section > h2,
+.contact-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    max-width: 700px;
+}
+
+.content-section > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 1.15rem;
+    margin: 28px 0 0;
+    max-width: 600px;
+}
+
+.courses-section {
+    border-top: 1px solid var(--line);
+}
+
+.cards {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 54px;
+}
+
+.card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    min-height: 270px;
+    padding: 28px;
+    transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.card:hover {
+    border-color: var(--green);
+    transform: translateY(-5px);
+}
+
+.card-number {
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.card h3 {
+    font-size: 1.7rem;
+    margin: 72px 0 12px;
+}
+
+.card p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.contact-section {
+    align-items: end;
+    background: #dce9c6;
+    display: flex;
+    justify-content: space-between;
+    max-width: none;
+    padding-left: max(32px, calc((100vw - 1116px) / 2));
+    padding-right: max(32px, calc((100vw - 1116px) / 2));
+}
+
+.contact-details {
+    display: flex;
+    gap: 70px;
+}
+
+.contact-details p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.contact-details strong {
+    color: var(--ink);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+footer {
+    background: var(--ink);
+    color: #a8b9aa;
+    padding: 22px 32px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        min-height: 620px;
+        padding: 70px 20px;
+    }
+
+    .content-section,
+    .contact-section {
+        padding: 78px 20px;
+    }
+
+    .cards,
+    .contact-section {
+        display: block;
+    }
+
+    .card {
+        margin-top: 14px;
+        min-height: auto;
+    }
+
+    .card h3 {
+        margin-top: 42px;
+    }
+
+    .contact-details {
+        display: grid;
+        gap: 18px;
+        margin-top: 38px;
+    }
+}
